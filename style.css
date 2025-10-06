@@ -1,9 +1,9 @@
 body{
     font-family:sans-serif;
-   
+    background-color: #f4f4f4;
 }
+
 .container{
-   
     background-color: #f6efef;
     padding: 30px 10%;
     margin:  20px 8%;
@@ -11,6 +11,11 @@ body{
     box-shadow: 
         0px 0px 20px rgba(64, 59, 59, 0.5), 
         0px 0px 50px rgba(235, 240, 244, 0.3); 
+}
+.middle-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
 }
 
 table {
@@ -33,15 +38,18 @@ h2{
     text-transform: uppercase;
     
 }
-.middle-container{
-    display: flex;
-    justify-content: space-between;
-}
+
 input{
     padding: 5px; 
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 select{
     padding: 5px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 #addBtn{
     background-color: rgb(34, 215, 34);
@@ -49,7 +57,52 @@ select{
     border-radius: 10%;
     padding: 5px;
     width: 60px;
-    float: right;
     margin-bottom: 20px;
     margin-right: 20px;
+    cursor: pointer;
 }
+#expenseTable{
+    max-width: 800px;
+}
+.deleteBtn{
+    cursor: pointer;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+@media(max-width: 620px){
+    body{
+        font-size: 0.8rem;
+    }
+    .container{
+        margin: 20px;
+    }
+    input{
+        width: 80%;
+        }
+    select{
+        width: 80%;
+    }
+}
+@media(max-width: 442px){
+    body{
+        font-size: 0.7rem;
+    }
+    .container{
+        margin: 10px;
+        padding: 30px;
+    }
+    .middle-container{
+        display: block;
+    
+    }
+    input{
+        width: 70%;
+        }
+    select{
+        width: 75%;
+    }
+
+}
+
